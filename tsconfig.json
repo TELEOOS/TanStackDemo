@@ -5,7 +5,14 @@
     "baseUrl": "src",
     "paths": {
       "@screens/*": ["screens/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@features/*": ["features/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"],
+      "@Productcomponents/*": ["features/products/components/*"],
+      "@productScreens/*": ["features/products/screens/*"],
+      "@products/*": ["features/products/*"],
+      "@Productstypes/*": ["features/products/types/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

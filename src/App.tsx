@@ -1,13 +1,13 @@
-import { View, Text } from 'react-native';
-import React from 'react';
 import QueryProvider from 'app/providers/QueryProvider';
+import { NavigationContainer } from '@react-navigation/native';
+import { MainTabs } from 'app/navigation/MainTabs';
 
 const App = () => {
   return (
     <QueryProvider>
-      <View>
-        <Text>This is my first react native using tanstack </Text>
-      </View>
+      <NavigationContainer>
+        <MainTabs />
+      </NavigationContainer>
     </QueryProvider>
   );
 };

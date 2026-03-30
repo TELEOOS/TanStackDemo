@@ -7,7 +7,14 @@ module.exports = {
         root: ['./src'],
         alias: {
           '@screens': './src/screens',
-          '@components': './src/components',
+          '@components': './src/features/products/components',
+          '@Productcomponents': './src/features/products/components',
+          '@features': './src/features',
+          '@utils': './src/utils',
+          '@hooks': './src/hooks',
+          '@products': './src/features/products',
+          '@productScreens': './src/features/products/screens',
+          '@Productstypes': './src/features/products/types',
         },
         extensions: [
           '.ios.js',

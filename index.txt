@@ -1,0 +1,3 @@
+///===============Quelque problemes que j'ai rencontrer ===========//
+\response est une AxiosResponse, donc un objet plus large que nos données métier.
+Les vraies données utiles de l’API sont dans response.data. Axios inclut aussi status, headers, config et request, donc retourner response ne correspond pas au type ProductsResponse.
