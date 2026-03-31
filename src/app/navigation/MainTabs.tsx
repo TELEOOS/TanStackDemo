@@ -1,6 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MainTabParamList } from './navigation.types';
-import { IconList, IconSearch } from '@tabler/icons-react-native';
+import {
+  IconCategory,
+  IconList,
+  IconReportMoney,
+  IconSearch,
+} from '@tabler/icons-react-native';
 import ProductsListScreen from '@productScreens/ProductsListScreen';
 import ProductSearchScreen from '@productScreens/ProductSearchScreen';
 import PriceScreen from '@productScreens/ProductPriceScreen';
@@ -20,9 +25,9 @@ export const MainTabs = () => {
             case 'Search':
               return <IconSearch color={color} size={size} />;
             case 'Categories':
-              return <IconList color={color} size={size} />;
+              return <IconCategory color={color} size={size} />;
             case 'Price':
-              return <IconList color={color} size={size} />;
+              return <IconReportMoney color={color} size={size} />;
             default:
               return null;
           }

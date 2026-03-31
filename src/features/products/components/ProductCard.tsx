@@ -10,7 +10,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{product.title}</Text>
-      <Image source={{ uri: product.thumbnail }} style={styles.image} />
+      <Image
+        source={{ uri: product.thumbnail }}
+        style={styles.image}
+        resizeMode="cover"
+      />
       <Text style={styles.description}>{product.description}</Text>
     </View>
   );
@@ -22,7 +26,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     backgroundColor: '#fff',
-    borderRadius: 5,
+    marginTop: 10,
+    borderRadius: 10,
   },
   title: {
     fontSize: 16,
@@ -30,8 +35,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 150,
+    height: 250,
     borderRadius: 5,
   },
-  description: { marginTop: 5, fontSize: 14, color: '#666' },
+  description: { marginTop: 5, fontSize: 14, color: '#433535' },
 });

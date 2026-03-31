@@ -8,6 +8,14 @@ import { ProductsResponse } from '@Productstypes/product.types';
 //  ProductsResponse.
 export const getProducts = async (): Promise<ProductsResponse> => {
   const response = await api.get<ProductsResponse>('/products');
+  return response.data;
+};
 
+export const searchProducts = async (
+  search: string,
+): Promise<ProductsResponse> => {
+  const response = await api.get<ProductsResponse>(
+    `/products/search?q=${encodeURIComponent(search)}`,
+  );
   return response.data;
 };

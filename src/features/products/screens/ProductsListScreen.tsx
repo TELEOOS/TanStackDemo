@@ -4,18 +4,19 @@ import {
   FlatList,
   ActivityIndicator,
   Text,
+  RefreshControl,
 } from 'react-native';
 import React from 'react';
 import { useProducts } from '../hooks/useProducts';
 import ProductCard from '@Productcomponents/ProductCard';
 
 const ProductsListScreen = () => {
-  const { data, isError, isLoading } = useProducts();
+  const { data, isError, isLoading, refetch, isRefetching } = useProducts();
 
   if (isLoading)
     return (
       <View style={styles.LoadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator size="large" color="#0000ff" animating={true} />
       </View>
     );
   if (isError)
@@ -29,14 +30,9 @@ const ProductsListScreen = () => {
       <FlatList
         data={data?.products}
         keyExtractor={item => item.id.toString()}
-        // refreshControl={
-        //   <RefreshControl
-        //     refreshing={isLoading}
-        //     onRefresh={() => {
-        //       // Handle refresh logic here
-        //     }}
-        //   />
-        // }
+        refreshControl={
+          <RefreshControl onRefresh={refetch} refreshing={isRefetching} />
+        }
         renderItem={({ item }) => <ProductCard product={item} />}
       />
     </View>
