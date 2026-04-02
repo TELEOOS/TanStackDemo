@@ -11,7 +11,7 @@ import {
 import { IconSearch } from '@tabler/icons-react-native';
 
 import { useSearchProducts } from '../hooks/useSearchProducts';
-import ProductCard from '../components/ProductCard';
+import ProductCard from '@Productcomponents/ProductCard';
 
 const ProductsSearchScreen = () => {
   const [search, setSearch] = useState('');

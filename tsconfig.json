@@ -2,17 +2,17 @@
   "extends": "@react-native/typescript-config",
   "compilerOptions": {
     "types": ["jest"],
-    "baseUrl": "src",
     "paths": {
-      "@screens/*": ["screens/*"],
-      "@components/*": ["components/*"],
-      "@features/*": ["features/*"],
-      "@utils/*": ["utils/*"],
-      "@hooks/*": ["hooks/*"],
-      "@Productcomponents/*": ["features/products/components/*"],
-      "@productScreens/*": ["features/products/screens/*"],
-      "@products/*": ["features/products/*"],
-      "@Productstypes/*": ["features/products/types/*"]
+      "@screens/*": ["./src/screens/*"],
+      "@api/*": ["./src/shared/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@features/*": ["./src/features/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@Productcomponents/*": ["./src/features/products/components/*"],
+      "@productScreens/*": ["./src/features/products/screens/*"],
+      "@products/*": ["./src/features/products/*"],
+      "@Productstypes/*": ["./src/features/products/types/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -9,6 +9,8 @@ import {
 import React from 'react';
 import { useProducts } from '../hooks/useProducts';
 import ProductCard from '../components/ProductCard';
+import CreateProductForm from '../components/CreateProductForm';
+import UpdateProductForm from '../components/UpdateProductForm';
 
 const ProductsListScreen = () => {
   const { data, isError, isLoading, refetch, isRefetching } = useProducts();
@@ -27,6 +29,8 @@ const ProductsListScreen = () => {
     );
   return (
     <View style={styles.container}>
+      <CreateProductForm />
+      <UpdateProductForm />
       <FlatList
         data={data?.products}
         keyExtractor={item => item.id.toString()}

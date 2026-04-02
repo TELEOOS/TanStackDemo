@@ -12,3 +12,25 @@ export type ProductsResponse = {
   skip: number;
   limit: number;
 };
+
+export type CreateProductPayload = {
+  title: string;
+};
+
+export type CreateProductResponse = {
+  id: number;
+  title: string;
+};
+export type UpdateProductPayload = {
+  title: string;
+};
+
+export type UpdateProductVariables = {
+  id: number;
+  payload: UpdateProductPayload;
+};
+
+export type UpdateProductResponse = {
+  id: number;
+  title: string;
+};
