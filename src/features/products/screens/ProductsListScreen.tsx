@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import { useProducts } from '../hooks/useProducts';
-import ProductCard from '@Productcomponents/ProductCard';
+import ProductCard from '../components/ProductCard';
 
 const ProductsListScreen = () => {
   const { data, isError, isLoading, refetch, isRefetching } = useProducts();
